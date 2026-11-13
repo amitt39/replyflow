@@ -1,9 +1,20 @@
+import { Route, Routes } from 'react-router-dom'
+import Customers from './pages/Customers.jsx'
+import Dashboard from './pages/Dashboard.jsx'
+import Inbox from './pages/Inbox.jsx'
+import Settings from './pages/Settings.jsx'
+import TicketDetails from './pages/TicketDetails.jsx'
+
 function App() {
   return (
-    <>
-      <h1 className="text-4xl font-bold text-blue-600">ReplyFlow</h1>
-    </>
-  );
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/inbox" element={<Inbox />} />
+      <Route path="/tickets/" element={<TicketDetails />} />
+      <Route path="/customers" element={<Customers />} />
+      <Route path="/settings" element={<Settings />} />
+    </Routes>
+  )
 }
 
 export default App;
