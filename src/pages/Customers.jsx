@@ -1,5 +1,5 @@
 function Customers() {
-  return <h1>Customers</h1>
+  return null
 }
 
 export default Customers

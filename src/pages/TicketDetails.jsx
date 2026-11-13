@@ -1,5 +1,5 @@
 function TicketDetails() {
-  return <h1>TicketDetails</h1>
+  return null
 }
 
 export default TicketDetails

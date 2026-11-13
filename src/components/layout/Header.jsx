@@ -25,7 +25,7 @@ function Header({ onMenuClick }) {
             <path d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-        <h1 className="text-xl font-semibold tracking-tight text-slate-900">{title}</h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-slate-900">{title}</h1>
       </div>
 
       <div className="flex items-center gap-3 sm:gap-5">
