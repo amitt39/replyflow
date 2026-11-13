@@ -1,4 +1,5 @@
 import DashboardStats from '../components/dashboard/DashboardStats.jsx'
+import TicketPriorityChart from '../components/dashboard/TicketPriorityChart.jsx'
 import TicketVolumeChart from '../components/dashboard/TicketVolumeChart.jsx'
 
 function Dashboard() {
@@ -7,6 +8,7 @@ function Dashboard() {
       <h1 className="text-2xl font-semibold tracking-tight text-slate-900">Dashboard</h1>
       <DashboardStats />
       <TicketVolumeChart />
+      <TicketPriorityChart />
     </main>
   )
 }
