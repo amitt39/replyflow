@@ -10,7 +10,7 @@ const pageTitles = {
 
 function Header({ onMenuClick }) {
   const { pathname } = useLocation()
-  const title = pageTitles[pathname] ?? 'ReplyFlow'
+  const title = pathname.startsWith('/tickets/') ? 'Ticket Details' : pageTitles[pathname] ?? 'ReplyFlow'
 
   return (
     <header className="flex h-20 items-center justify-between border-b border-slate-200 bg-white px-4 sm:px-6 lg:px-8">

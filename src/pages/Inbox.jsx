@@ -2,89 +2,7 @@ import { useState } from "react";
 import TicketTable from "../components/tickets/TicketTable";
 import TicketSearch from "../components/tickets/TicketSearch";
 import TicketFilter from "../components/tickets/TicketFilters";
-
-const tickets = [
-  {
-    id: "RF-1042",
-    customer: "Olivia Martin",
-    subject: "Unable to update billing",
-    priority: "Urgent",
-    status: "Open",
-    createdAt: "2026-11-14",
-  },
-  {
-    id: "RF-1041",
-    customer: "Liam Johnson",
-    subject: "Question about account permissions",
-    priority: "High",
-    status: "Pending",
-    createdAt: "2026-11-13",
-  },
-  {
-    id: "RF-1040",
-    customer: "Emma Williams",
-    subject: "Exported report has missing data",
-    priority: "Medium",
-    status: "Open",
-    createdAt: "2026-11-13",
-  },
-  {
-    id: "RF-1039",
-    customer: "Noah Brown",
-    subject: "Password reset email not received",
-    priority: "High",
-    status: "Resolved",
-    createdAt: "2026-11-12",
-  },
-  {
-    id: "RF-1038",
-    customer: "Sophia Davis",
-    subject: "Change notification settings",
-    priority: "Low",
-    status: "Resolved",
-    createdAt: "2026-11-12",
-  },
-  {
-    id: "RF-1037",
-    customer: "James Wilson",
-    subject: "Unable to access dashboard",
-    priority: "Urgent",
-    status: "Open",
-    createdAt: "2026-11-11",
-  },
-  {
-    id: "RF-1036",
-    customer: "Ava Taylor",
-    subject: "Request for subscription upgrade",
-    priority: "Medium",
-    status: "Pending",
-    createdAt: "2026-11-10",
-  },
-  {
-    id: "RF-1035",
-    customer: "William Anderson",
-    subject: "Invoice download issue",
-    priority: "Low",
-    status: "Open",
-    createdAt: "2026-11-09",
-  },
-  {
-    id: "RF-1034",
-    customer: "Mia Thomas",
-    subject: "Account temporarily locked",
-    priority: "High",
-    status: "Resolved",
-    createdAt: "2026-11-08",
-  },
-  {
-    id: "RF-1033",
-    customer: "Benjamin Moore",
-    subject: "Unable to change email address",
-    priority: "Medium",
-    status: "Pending",
-    createdAt: "2026-11-07",
-  },
-];
+import { tickets } from "../data/tickets";
 
 function Inbox() {
   const [filteredText, setFilterdText] = useState("");
@@ -122,7 +40,14 @@ function Inbox() {
             filteredText={filteredText}
             handleFilteredText={setFilterdText}
           />
-          <TicketFilter selectedPriority={selectedPriority} handlePriority={setSelectedPriority} selectedStatus={selectedStatus} handleStatus={setSelectedStatus} sortOrder={sortOrder} handleSort={setSortOrder}/>
+          <TicketFilter
+            selectedPriority={selectedPriority}
+            handlePriority={setSelectedPriority}
+            selectedStatus={selectedStatus}
+            handleStatus={setSelectedStatus}
+            sortOrder={sortOrder}
+            handleSort={setSortOrder}
+          />
         </div>
       </div>
       <TicketTable tickets={sortedTickets} />
