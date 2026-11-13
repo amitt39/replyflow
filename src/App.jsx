@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import AppLayout from './components/layout/AppLayout.jsx'
 import Customers from './pages/Customers.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import Inbox from './pages/Inbox.jsx'
@@ -8,11 +9,13 @@ import TicketDetails from './pages/TicketDetails.jsx'
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="/inbox" element={<Inbox />} />
-      <Route path="/tickets/" element={<TicketDetails />} />
-      <Route path="/customers" element={<Customers />} />
-      <Route path="/settings" element={<Settings />} />
+      <Route element={<AppLayout />}>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/inbox" element={<Inbox />} />
+        <Route path="/tickets/" element={<TicketDetails />} />
+        <Route path="/customers" element={<Customers />} />
+        <Route path="/settings" element={<Settings />} />
+      </Route>
     </Routes>
   )
 }
