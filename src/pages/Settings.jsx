@@ -1,5 +1,3 @@
-function Settings() {
-  return null
+export default function Settings() {
+  return null;
 }
-
-export default Settings
