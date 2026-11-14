@@ -1,4 +1,8 @@
-export default function TicketHeader({ ticket, handleStatusChange }) {
+export default function TicketHeader({
+  ticket,
+  handleStatusChange,
+  handlePriorityChange,
+}) {
   return (
     <section className="flex-none rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm sm:px-5">
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
@@ -25,11 +29,17 @@ export default function TicketHeader({ ticket, handleStatusChange }) {
               Priority
             </dt>
             <dd className="mt-1">
-              <span
-                className={`inline-flex rounded-full px-2.5 py-1 text-xs font-medium ${ticket.priority === "Urgent" ? "bg-red-50 text-red-700" : ticket.priority === "High" ? "bg-orange-50 text-orange-700" : ticket.priority === "Medium" ? "bg-yellow-50 text-yellow-700" : "bg-green-50 text-green-700"}`}
+              <select
+                value={ticket.priority}
+                onChange={(e) => {
+                  handlePriorityChange(e.target.value);
+                }}
               >
-                {ticket.priority}
-              </span>
+                <option value="Urgetn">Urgent</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+              </select>
             </dd>
           </div>
           <div>

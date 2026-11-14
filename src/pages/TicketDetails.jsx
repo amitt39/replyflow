@@ -50,6 +50,13 @@ function TicketDetails() {
       ),
     );
   }
+  function handlePriorityChange(newPriority) {
+    setTickets((previousTickets) =>
+      previousTickets.map((item) =>
+        item.id === ticket.id ? { ...item, priority: newPriority } : item,
+      ),
+    );
+  }
 
   if (!ticket) {
     return (
@@ -61,7 +68,11 @@ function TicketDetails() {
 
   return (
     <main className="flex min-h-[calc(100vh-7rem)] flex-col gap-4 lg:h-[calc(100vh-9rem)] lg:min-h-0">
-      <TicketHeader ticket={ticket} handleStatusChange={handleStatusChange} />
+      <TicketHeader
+        ticket={ticket}
+        handleStatusChange={handleStatusChange}
+        handlePriorityChange={handlePriorityChange}
+      />
       <Conversation
         ticket={ticket}
         isReplyMode={isReplyMode}
