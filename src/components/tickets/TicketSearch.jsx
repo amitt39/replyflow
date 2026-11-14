@@ -1,6 +1,6 @@
 export default function TicketSearch({filteredText, handleFilteredText}) {
   return (
-    <label className="relative min-w-0 lg:col-span-3">
+    <label className="relative min-w-0 lg:flex-1">
       <span className="sr-only">Search tickets</span>
       <svg
         viewBox="0 0 24 24"

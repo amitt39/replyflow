@@ -15,7 +15,7 @@ function Sidebar({ isOpen, onClose }) {
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-lg font-bold text-white">R</div>
           <span className="text-lg font-semibold tracking-tight text-slate-900">ReplyFlow</span>
         </div>
-        <button type="button" onClick={onClose} className="ml-auto rounded-lg p-2 text-slate-500 hover:bg-slate-100 lg:hidden" aria-label="Close navigation menu">×</button>
+        <button type="button" onClick={onClose} className="ml-auto rounded-lg p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 lg:hidden" aria-label="Close navigation menu">×</button>
       </div>
 
       <nav className="flex-1 space-y-1 px-3 py-6" aria-label="Primary navigation">

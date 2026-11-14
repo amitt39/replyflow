@@ -70,7 +70,7 @@ function TicketVolumeChart() {
           id="ticket-volume-period"
           value={period}
           onChange={(event) => setPeriod(event.target.value)}
-          className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 outline-none transition-colors focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+          className="cursor-pointer rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 outline-none transition-colors hover:border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 [&>option]:bg-white [&>option]:text-slate-700"
         >
           <option>Last 7 Days</option>
           <option>Last 30 Days</option>

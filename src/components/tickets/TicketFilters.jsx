@@ -7,7 +7,7 @@ export default function TicketFilters({
   handleSort,
 }) {
   return (
-    <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 lg:col-span-3 lg:grid-cols-subgrid">
+    <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-3 lg:w-[min(100%,_28rem)] lg:flex-none">
       <div className="relative">
         {/* filter by priority */}
         <select
@@ -16,7 +16,7 @@ export default function TicketFilters({
           onChange={(e) => {
             handlePriority(e.target.value);
           }}
-          className="h-10 w-full appearance-none rounded-lg border border-slate-200 bg-white px-3 pr-9 text-sm font-medium text-slate-700 outline-none transition-colors hover:border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+          className="h-10 w-full min-w-0 appearance-none rounded-lg border border-slate-200 bg-white px-3 pr-9 text-sm font-medium text-slate-700 outline-none transition-colors hover:border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 [&>option]:bg-white [&>option]:text-slate-700"
         >
           <option value="All Priorities">All Priorities</option>
           <option value="Urgent">Urgent</option>
@@ -42,7 +42,7 @@ export default function TicketFilters({
           onChange={(e) => {
             handleStatus(e.target.value);
           }}
-          className="h-10 w-full appearance-none rounded-lg border border-slate-200 bg-white px-3 pr-9 text-sm font-medium text-slate-700 outline-none transition-colors hover:border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+          className="h-10 w-full min-w-0 appearance-none rounded-lg border border-slate-200 bg-white px-3 pr-9 text-sm font-medium text-slate-700 outline-none transition-colors hover:border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 [&>option]:bg-white [&>option]:text-slate-700"
         >
           <option value="All Statuses">All Statuses</option>
           <option value="Open">Open</option>
@@ -67,7 +67,7 @@ export default function TicketFilters({
           onChange={(e) => {
             handleSort(e.target.value);
           }}
-          className="h-10 w-full appearance-none rounded-lg border border-slate-200 bg-white px-3 pr-9 text-sm font-medium text-slate-700 outline-none transition-colors hover:border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+          className="h-10 w-full min-w-0 appearance-none rounded-lg border border-slate-200 bg-white px-3 pr-9 text-sm font-medium text-slate-700 outline-none transition-colors hover:border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 [&>option]:bg-white [&>option]:text-slate-700"
         >
           <option value="newest">Newest First</option>
           <option value="oldest">Oldest First</option>

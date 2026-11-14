@@ -12,7 +12,7 @@ function App() {
       <Route element={<AppLayout />}>
         <Route path="/" element={<Dashboard />} />
         <Route path="/inbox" element={<Inbox />} />
-        <Route path="/tickets " element={<TicketDetails />} />
+        <Route path="/tickets" element={<TicketDetails />} />
         <Route path="/tickets/:id" element={<TicketDetails />} />
         <Route path="/customers" element={<Customers />} />
         <Route path="/settings" element={<Settings />} />

@@ -21,7 +21,7 @@ export default function ReplyComposer({
             className={
               isReplyMode
                 ? "rounded-md bg-white px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm"
-                : "rounded-md px-3 py-1 text-xs font-medium text-slate-500 cursor-pointer"
+                : "cursor-pointer rounded-md px-3 py-1 text-xs font-medium text-slate-500 transition-colors hover:bg-white/70 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-200"
             }
           >
             Reply
@@ -35,7 +35,7 @@ export default function ReplyComposer({
             className={
               !isReplyMode
                 ? "rounded-md bg-white px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm"
-                : "rounded-md px-3 py-1 text-xs font-medium text-slate-500 cursor-pointer"
+                : "cursor-pointer rounded-md px-3 py-1 text-xs font-medium text-slate-500 transition-colors hover:bg-white/70 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-200"
             }
           >
             Internal Note
@@ -44,7 +44,7 @@ export default function ReplyComposer({
         <button
           onClick={handleSend}
           type="button"
-          className="rounded-lg bg-indigo-500 px-4 py-1.5 text-sm font-semibold text-white cursor-pointer"
+          className="cursor-pointer rounded-lg bg-indigo-600 px-4 py-1.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 active:bg-indigo-800"
         >
           Send
         </button>

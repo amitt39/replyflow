@@ -43,7 +43,8 @@ export default function TicketTable({ tickets }) {
                 <tr
                   key={ticket.id}
                   onClick={() => navigate(`/tickets/${ticket.id}`)}
-                  className="border-b border-slate-100 text-slate-600 transition-colors last:border-b-0 hover:bg-slate-50 cursor-pointer"
+                  tabIndex="0"
+                  className="cursor-pointer border-b border-slate-100 text-slate-600 transition-colors last:border-b-0 hover:bg-indigo-50/40 focus:bg-indigo-50/40 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                 >
                   <td className="whitespace-nowrap px-5 py-4 font-medium text-slate-900 sm:px-6">
                     {ticket.id}

@@ -37,7 +37,7 @@ function Inbox() {
   return (
     <main className="space-y-6">
       <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
-        <div className="flex flex-col gap-3 lg:grid lg:grid-cols-[12%_17%_30%_12%_13%_16%] lg:items-center">
+        <div className="flex min-w-0 flex-col gap-3 lg:flex-row lg:items-center">
           {/* Searchbar */}
           <TicketSearch
             filteredText={filteredText}
