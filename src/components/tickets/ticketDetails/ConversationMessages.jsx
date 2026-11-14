@@ -1,4 +1,10 @@
+import { useEffect, useRef } from "react";
+
 export default function ConversationMessages({ ticket }) {
+  const messagesEndRef = useRef(null);
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [ticket.messages]);
   return (
     <>
       {/* covo box header */}
@@ -82,6 +88,7 @@ export default function ConversationMessages({ ticket }) {
             </article>
           );
         })}
+        <div ref={messagesEndRef} />
       </div>
     </>
   );
