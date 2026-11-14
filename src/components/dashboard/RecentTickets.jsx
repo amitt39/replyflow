@@ -1,11 +1,12 @@
 import TicketTable from "../tickets/TicketTable";
-import { tickets } from "../../data/tickets";
-
-const recentTickets = [...tickets]
-  .sort((t1, t2) => new Date(t2.createdAt) - new Date(t1.createdAt))
-  .slice(0, 5);
+import { useContext } from "react";
+import { TicketsContext } from "../../context/TicketsContext";
 
 function RecentTickets() {
+  const { tickets } = useContext(TicketsContext);
+  const recentTickets = [...tickets]
+    .sort((t1, t2) => new Date(t2.createdAt) - new Date(t1.createdAt))
+    .slice(0, 5);
   return (
     <section
       aria-labelledby="recent-tickets-title"

@@ -1,4 +1,4 @@
-export default function TicketHeader({ ticket }) {
+export default function TicketHeader({ ticket, handleStatusChange }) {
   return (
     <section className="flex-none rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm sm:px-5">
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
@@ -37,11 +37,16 @@ export default function TicketHeader({ ticket }) {
               Status
             </dt>
             <dd className="mt-1">
-              <span
-                className={`inline-flex rounded-full px-2.5 py-1 text-xs font-medium ${ticket.status === "Open" ? "bg-blue-50 text-blue-700" : ticket.status === "Pending" ? "bg-amber-50 text-amber-700" : "bg-emerald-50 text-emerald-700"}`}
+              <select
+                value={ticket.status}
+                onChange={(e) => {
+                  handleStatusChange(e.target.value);
+                }}
               >
-                {ticket.status}
-              </span>
+                <option value="Open">Open</option>
+                <option value="Pending">Pending</option>
+                <option value="Resolved">Resolved</option>
+              </select>
             </dd>
           </div>
         </dl>

@@ -43,6 +43,14 @@ function TicketDetails() {
     setReplyText("");
   }
 
+  function handleStatusChange(newStatus) {
+    setTickets((previousTickets) =>
+      previousTickets.map((item) =>
+        item.id === ticket.id ? { ...item, status: newStatus } : item,
+      ),
+    );
+  }
+
   if (!ticket) {
     return (
       <div className="flex min-h-[320px] items-center justify-center rounded-xl border border-slate-200 bg-white p-8 shadow-sm">
@@ -53,7 +61,7 @@ function TicketDetails() {
 
   return (
     <main className="flex min-h-[calc(100vh-7rem)] flex-col gap-4 lg:h-[calc(100vh-9rem)] lg:min-h-0">
-      <TicketHeader ticket={ticket} />
+      <TicketHeader ticket={ticket} handleStatusChange={handleStatusChange} />
       <Conversation
         ticket={ticket}
         isReplyMode={isReplyMode}

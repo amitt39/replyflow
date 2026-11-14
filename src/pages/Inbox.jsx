@@ -2,9 +2,12 @@ import { useState } from "react";
 import TicketTable from "../components/tickets/TicketTable";
 import TicketSearch from "../components/tickets/TicketSearch";
 import TicketFilter from "../components/tickets/TicketFilters";
-import { tickets } from "../data/tickets";
+import { useContext } from "react";
+import { TicketsContext } from "../context/TicketsContext";
 
 function Inbox() {
+  const { tickets } = useContext(TicketsContext);
+
   const [filteredText, setFilterdText] = useState("");
   const [selectedStatus, setSelectedStatus] = useState("All Statuses");
   const [selectedPriority, setSelectedPriority] = useState("All Priorities");
