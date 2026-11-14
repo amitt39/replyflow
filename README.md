@@ -1,5 +1,7 @@
 # ReplyFlow
 
+> **Note:** This project was built purely for learning and practising React concepts. It is not intended to be a perfect or production-ready application. There may be areas that can be improved and The UI styling was created with Codex. All React logic and functionality were written manually.
+
 ReplyFlow is a customer support inbox application built with React. It helps support agents manage customer tickets and conversations in one place.
 
 ## Features
@@ -21,10 +23,6 @@ ReplyFlow is a customer support inbox application built with React. It helps sup
 - React Router
 - Vite
 - localStorage
-
-## Note
-
-The UI styling was created with AI assistance. All React logic and functionality were written manually.
 
 ## Run Locally
 
