@@ -5,7 +5,7 @@ export default function TicketTable({ tickets }) {
   return (
     <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
       <div className="overflow-x-auto">
-        <table className="min-w-[760px] w-full table-fixed text-left text-sm">
+        <table className="min-w-190 w-full table-fixed text-left text-sm">
           <colgroup>
             <col className="w-[12%]" />
             <col className="w-[17%]" />

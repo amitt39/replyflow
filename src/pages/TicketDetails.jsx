@@ -60,7 +60,7 @@ function TicketDetails() {
 
   if (!ticket) {
     return (
-      <div className="flex min-h-[320px] items-center justify-center rounded-xl border border-slate-200 bg-white p-8 shadow-sm">
+      <div className="flex min-h-80 items-center justify-center rounded-xl border border-slate-200 bg-white p-8 shadow-sm">
         <p className="text-sm text-slate-500">Ticket not found.</p>
       </div>
     );
