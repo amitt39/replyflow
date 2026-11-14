@@ -1,16 +1,94 @@
-# React + Vite
+# ReplyFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+ReplyFlow is a frontend-only smart customer support inbox for managing tickets, conversations, customers, and agent preferences from one focused workspace.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Dashboard with ticket volume, priority, and activity summaries
+- Inbox search, status/priority filters, and configurable date sorting
+- Ticket details with replies, internal notes, and editable status/priority
+- Customer directory with derived ticket statistics and ticket history
+- Persistent profile, inbox, and appearance preferences
+- Light and dark application themes
+- Responsive layout for desktop, tablet, and mobile screens
+- Local ticket and preference persistence through `localStorage`
 
-## React Compiler
+## Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Screenshots can be added here for portfolio presentation:
 
-## Expanding the Oxlint configuration
+- `[Dashboard screenshot]`
+- `[Inbox screenshot]`
+- `[Ticket details screenshot]`
+- `[Settings screenshot]`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Tech stack
+
+- React 19
+- Vite
+- JavaScript
+- React Router
+- Tailwind CSS v4
+- Recharts
+- Context API and browser `localStorage`
+
+## Project structure
+
+```text
+src/
+├── components/       Reusable layout, dashboard, customer, ticket, and UI components
+├── context/          Ticket and application preference providers
+├── data/             Seed ticket data
+├── pages/            Route-level dashboard, inbox, ticket, customer, and settings views
+├── App.jsx           Application routes
+├── index.css         Tailwind entry point and theme tokens
+└── main.jsx          Application bootstrap and providers
+```
+
+## Getting started
+
+Requirements: Node.js 18+ and npm.
+
+```bash
+npm install
+npm run dev
+```
+
+Open the local URL printed by Vite, normally `http://localhost:5173`.
+
+## Commands
+
+```bash
+npm run dev      # Start the development server
+npm run lint     # Run Oxlint
+npm run build    # Create a production build
+npm run preview  # Preview the production build locally
+```
+
+## Deployment
+
+The project is configured as a standard Vite single-page application and has no required environment variables or server-only secrets.
+
+To deploy with Vercel:
+
+1. Push the repository to GitHub, GitLab, or Bitbucket.
+2. Import the repository into Vercel.
+3. Use the detected Vite settings, or set the build command to `npm run build` and the output directory to `dist`.
+4. Deploy.
+
+For direct CLI deployment, install and authenticate with Vercel, then run:
+
+```bash
+npx vercel
+npx vercel --prod
+```
+
+Because this is a client-side SPA, configure a rewrite to serve `index.html` for deep links if your hosting provider does not handle Vite history fallback automatically.
+
+## Future improvements
+
+- Connect tickets to a backend service
+- Add authentication and role-based access
+- Add automated tests and end-to-end route coverage
+- Replace placeholder avatar handling with profile image uploads
+- Add real-time team collaboration
