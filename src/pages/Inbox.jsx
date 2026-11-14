@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TicketTable from "../components/tickets/TicketTable";
 import TicketSearch from "../components/tickets/TicketSearch";
 import TicketFilter from "../components/tickets/TicketFilters";
@@ -12,6 +12,10 @@ function Inbox() {
   const [selectedStatus, setSelectedStatus] = useState("All Statuses");
   const [selectedPriority, setSelectedPriority] = useState("All Priorities");
   const [sortOrder, setSortOrder] = useState("newest");
+
+  useEffect(() => {
+    setSortOrder(localStorage.getItem("inboxPreferences") || "newest");
+  }, []);
 
   const searchText = filteredText.toLowerCase();
 
